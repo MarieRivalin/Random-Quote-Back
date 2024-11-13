@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotes",
+  "info": {
+    "singularName": "quote",
+    "pluralName": "quotes",
+    "displayName": "quote",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quote": {
+      "type": "json"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
