@@ -67,6 +67,7 @@ module.exports = createCoreController("api::quote.quote", ({ strapi }) => ({
     try {
       const user = ctx.state.user;
       const { quoteId } = ctx.request.body;
+      console.log("body >>>>", ctx.request.body);
 
       if (!quoteId) {
         return ctx.badRequest("Quote ID is required.");
