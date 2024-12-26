@@ -17,9 +17,7 @@ module.exports = createCoreController("api::quote.quote", ({ strapi }) => ({
         citation: quote.quote.fr.citation,
         auteur: quote.quote.fr.auteur,
         ouvrage: quote.quote.fr.ouvrage,
-        photo: quote.photo?.url
-          ? `http://localhost:1337${quote.photo.url}`
-          : null,
+        photo: quote.photo.data.attributes.url,
       }));
 
       const randomFrenchQuote =
@@ -47,9 +45,7 @@ module.exports = createCoreController("api::quote.quote", ({ strapi }) => ({
         citation: quote.quote.en.citation,
         auteur: quote.quote.en.auteur,
         ouvrage: quote.quote.en.ouvrage,
-        photo: quote.photo?.url
-          ? `http://localhost:1337${quote.photo.url}`
-          : null,
+        photo: quote.photo.data.attributes.url,
       }));
 
       const randomEnglishQuote =
