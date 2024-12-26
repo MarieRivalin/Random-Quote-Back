@@ -39,7 +39,7 @@ module.exports = createCoreController("api::quote.quote", ({ strapi }) => ({
       if (quotes.length === 0) {
         return ctx.send({ message: "No quotes found" }, 404);
       }
-
+      console.log("quotes >>>>>>", quotes);
       const englishQuotes = quotes.map((quote) => ({
         id: quote.id,
         citation: quote.quote.en.citation,
